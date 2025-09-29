@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Author: Janaska Bowles -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Validation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 30px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        input {
+            margin: 8px;
+            padding: 8px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        img {
+            width: 150px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Pico's Secret Page</h1>
+    <p>Fill out the form to unlock the secret message!</p>
+
+    <form id="userForm" onsubmit="return validateForm()">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+        <label for="zip">Zip Code:</label><br>
+        <input type="text" id="zip" name="zip"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+
+    <img src="Gal.jpg" alt="Astronaut">
+
+    <script src="strings.js"></script>
+</body>
+</html>
