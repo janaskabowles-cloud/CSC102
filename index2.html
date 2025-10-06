@@ -1,0 +1,87 @@
+Janaska Bowles
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile-friendly scaling -->
+    <title>Meme Mover Game</title> <!-- Browser tab title -->
+    
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background: linear-gradient(180deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars while image moves */
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-shadow: 2px 2px black;
+        }
+
+        /* Form container for buttons */
+        form {
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: gold;
+            color: black;
+            border: none;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        /* The meme image */
+        #meme {
+            position: absolute; /* allows movement */
+            top: 50%; /* initial center position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            border-radius: 10px;
+            border: 3px solid white;
+        }
+
+        /* Output message area */
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page header -->
+    <h1>Welcome to Pico's Meme Mover 🎮</h1>
+    <p>Click "Start" to make the meme move randomly. Click "Stop" to freeze it!</p>
+
+    <!-- The game form -->
+    <form id="controlForm" onsubmit="return false;">
+        <button type="button" id="startBtn" onclick="startMoving()">Start</button>
+        <button type="button" id="stopBtn" onclick="stopMoving()" disabled>Stop</button>
+    </form>
+
+    <!-- The meme image that will move -->
+    <img id="meme" src="https://i.imgflip.com/1bij.jpg" alt="Funny Meme">
+
+    <!-- Output text area -->
+    <div id="output">Press Start to begin!</div>
+
+    <!-- Link to JavaScript -->
+    <script src="moveMeme.js"></script>
+    
+</body>
+</html>
